@@ -1,0 +1,31 @@
+ASTRO-GUARD — FINAL POLISH NOTES
+================================
+
+أهم التحسينات في النسخة النهائية:
+- إضافة فحص محلي سريع لصحة السيرفر وقاعدة البيانات؛ تظهر حالته أسفل صفحة المقدمة.
+- جعل نافذة تسجيل الدخول/إنشاء الحساب قابلة للتمرير على الشاشات القصيرة والموبايل.
+- إضافة زر SHOW / HIDE لكلمات المرور مع دعم قارئات الشاشة.
+- تحميل صورة Earth بصيغة WebP بشكل lazy مع decoding=async لتقليل وقت التحميل الأول.
+- الإبقاء على التصميم خفيفًا بدون Blur ثقيل أو مؤثرات 3D مستمرة.
+- إضافة اختبارات تلقائية محلية لتسجيل الحساب، تسجيل الدخول، الجلسات، CSRF، عزل بيانات الحسابات، وعدم كشف ملف قاعدة البيانات.
+- إضافة مشغلات Windows وmacOS/Linux وملف .gitignore.
+
+التحقق:
+- Python syntax: py_compile.
+- JavaScript syntax: node --check للملفات والـ inline scripts.
+- HTML IDs: لا توجد IDs مكررة.
+- اختبارات HTTP للحسابات وقاعدة البيانات: test_local_server.py.
+- تم فحص منطق واجهة التسجيل وDaily Check-in ساكنًا، لكن لم يتم التحقق من فتح Chrome على جهاز المستخدم نفسه.
+- اختبارات واجهة المتصفح الفعلية تظل مطلوبة بعد فك الضغط محليًا.
+
+الحدود:
+هذه نسخة محلية للعرض الطلابي، وليست خدمة سحابية عامة أو نظامًا طبيًا تشغيليًا. لا تستخدم بيانات صحية حقيقية أو كلمات مرور تستخدمها في حساباتك الأخرى.
+
+
+NASA DATA CATALOG UPDATE — 14 NOV 2026
+--------------------------------------
+- Added a source guide explaining the difference between data.nasa.gov (broad NASA metadata catalog) and NASA OSDR (space-life-science repository).
+- Curated Inspiration4 study cards: OSD-569 (whole blood), OSD-570 (PBMC immune-cell profiling), OSD-575 (serum metabolic / immune-cardiac panels), OSD-656 (urine inflammation panel), and OSD-574 (skin biopsy / microbiome).
+- Added one-click “LOAD IN INSPECTOR” buttons that populate the OSDR metadata inspector. This action retrieves metadata only; it does not import measurements into the crew record.
+- Reiterated that retrospective biospecimen research must remain isolated from individual daily check-ins and physiology observations.
+- Added source links to the NASA general health catalog, OSDR search and Inspiration4 mission record.
